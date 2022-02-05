@@ -13,6 +13,10 @@
 		7459B4252783BB68005A5642 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7459B4132783BB66005A5642 /* ContentView.swift */; };
 		7459B4262783BB68005A5642 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7459B4142783BB68005A5642 /* Assets.xcassets */; };
 		7459B4272783BB68005A5642 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7459B4142783BB68005A5642 /* Assets.xcassets */; };
+		7459B4322783BC7B005A5642 /* FuzzyKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7459B4312783BC7B005A5642 /* FuzzyKit */; };
+		74B8886E27AEC7C8000425B2 /* FuzzyKit in Frameworks */ = {isa = PBXBuildFile; productRef = 74B8886D27AEC7C8000425B2 /* FuzzyKit */; };
+		74CA3D8227AECE23008E9D57 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 74CA3D8127AECE23008E9D57 /* SwiftUICharts */; };
+		74CA3D8427AECEFE008E9D57 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 74CA3D8327AECEFE008E9D57 /* SwiftUICharts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74B8886E27AEC7C8000425B2 /* FuzzyKit in Frameworks */,
+				74CA3D8227AECE23008E9D57 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,6 +42,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7459B4322783BC7B005A5642 /* FuzzyKit in Frameworks */,
+				74CA3D8427AECEFE008E9D57 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +56,7 @@
 				7459B4112783BB66005A5642 /* Shared */,
 				7459B4202783BB68005A5642 /* macOS */,
 				7459B41A2783BB68005A5642 /* Products */,
+				74B8886A27AEC7B7000425B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +87,13 @@
 			path = macOS;
 			sourceTree = "<group>";
 		};
+		74B8886A27AEC7B7000425B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -94,6 +110,10 @@
 			dependencies = (
 			);
 			name = "FuzzyExample (iOS)";
+			packageProductDependencies = (
+				74B8886D27AEC7C8000425B2 /* FuzzyKit */,
+				74CA3D8127AECE23008E9D57 /* SwiftUICharts */,
+			);
 			productName = "FuzzyExample (iOS)";
 			productReference = 7459B4192783BB68005A5642 /* FuzzyExample.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +131,10 @@
 			dependencies = (
 			);
 			name = "FuzzyExample (macOS)";
+			packageProductDependencies = (
+				7459B4312783BC7B005A5642 /* FuzzyKit */,
+				74CA3D8327AECEFE008E9D57 /* SwiftUICharts */,
+			);
 			productName = "FuzzyExample (macOS)";
 			productReference = 7459B41F2783BB68005A5642 /* FuzzyExample.app */;
 			productType = "com.apple.product-type.application";
@@ -142,6 +166,10 @@
 				Base,
 			);
 			mainGroup = 7459B40C2783BB66005A5642;
+			packageReferences = (
+				7459B4302783BC7B005A5642 /* XCRemoteSwiftPackageReference "FuzzyKit" */,
+				74CA3D8027AECE23008E9D57 /* XCRemoteSwiftPackageReference "ChartView" */,
+			);
 			productRefGroup = 7459B41A2783BB68005A5642 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -452,6 +480,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7459B4302783BC7B005A5642 /* XCRemoteSwiftPackageReference "FuzzyKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/allexks/FuzzyKit";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		74CA3D8027AECE23008E9D57 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7459B4312783BC7B005A5642 /* FuzzyKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7459B4302783BC7B005A5642 /* XCRemoteSwiftPackageReference "FuzzyKit" */;
+			productName = FuzzyKit;
+		};
+		74B8886D27AEC7C8000425B2 /* FuzzyKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7459B4302783BC7B005A5642 /* XCRemoteSwiftPackageReference "FuzzyKit" */;
+			productName = FuzzyKit;
+		};
+		74CA3D8127AECE23008E9D57 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 74CA3D8027AECE23008E9D57 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+		74CA3D8327AECEFE008E9D57 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 74CA3D8027AECE23008E9D57 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7459B40D2783BB66005A5642 /* Project object */;
 }
